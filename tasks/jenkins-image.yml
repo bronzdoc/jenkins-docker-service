@@ -1,0 +1,4 @@
+---
+name: "jenkins docker image"
+docker_image:
+  name: jenkins
