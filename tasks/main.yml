@@ -1,2 +1,4 @@
 ---
-# tasks file for jenkins-docker-service
+- include: jenkins-service.yml
+
+
