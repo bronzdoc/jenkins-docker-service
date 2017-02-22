@@ -1,10 +1,17 @@
 ---
-#- name: "Create jenkins service file"
-  #file: path=/etc/systemd/system/jenkins.service
+- name: "Create jenkins service"
+  template:
+    src: jenkins.service.j2
+    dest: /etc/systemd/system/jenkins.service
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
 
-- name: "Add Jenkins service"
-  template: src=jenkins.service.j2 dest=/tec/systemd/system/jenkins.service
-    owner=root
-    group=root
-    mode=0644
+- name: "Enable jenkins service"
+  service:
+    name: jenkins.service
+    enabled: yes
+  become: yes
+
 
