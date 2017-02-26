@@ -1,3 +1,3 @@
 ---
-user_home: "{{ lookup('env', 'HOME') }}"
+jenkins_home: "{{ lookup('env', 'HOME') }}/jenkins_home"
 jenkins_port: "8080:8080"

@@ -1,6 +1,6 @@
 - name: "Create jenkins home"
   file:
-    path: "{{ user_home }}/jenkins_home"
+    path: "{{ jenkins_home }}"
     state: directory
     mode: 0755
 
