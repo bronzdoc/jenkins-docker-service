@@ -14,4 +14,10 @@
     enabled: yes
   become: yes
 
+- name: "Start jenkins service"
+  service:
+    name: jenkins.service
+    state: started
+  become: yes
+
 
