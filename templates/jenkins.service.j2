@@ -4,9 +4,10 @@ Requires=docker.service
 After=docker.service
 
 [Service]
-Restart=always
+Restart=on-failure
+ExecStartPre=-/usr/bin/docker kill jenkins
 ExecStartPre=-/usr/bin/docker rm -f jenkins
-ExecStart=/usr/bin/docker run -d -p {{ jenkins_port }} -v {{ jenkins_home }}:/var/jenkins_home -t --name jenkins jenkins
+ExecStart=/usr/bin/docker run -p {{ jenkins_port }} -v {{ jenkins_home }}:/var/jenkins_home -t --name jenkins jenkins
 
 ExecStop=/usr/bin/docker stop -t 2 jenkins
 
