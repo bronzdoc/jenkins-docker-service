@@ -1,4 +1,6 @@
 ---
+- include: jenkins-home.yml
+- include: jenkins-image.yml
 - include: jenkins-service.yml
 
 
