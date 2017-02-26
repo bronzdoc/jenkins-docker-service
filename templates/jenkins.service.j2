@@ -5,7 +5,7 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker run -d -p 8080:8080 -p 50000:50000 -v {{ user_home }}/jenkins_home:/var/jenkins_home -t --name jenkins jenkins
+ExecStart=/usr/bin/docker run -d -p {{ jenkins_port }} -v {{ user_home }}/jenkins_home:/var/jenkins_home -t --name jenkins jenkins
 
 ExecStop=/usr/bin/docker stop -t 2 jenkins
 
