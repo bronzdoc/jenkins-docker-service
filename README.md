@@ -1,4 +1,4 @@
-docker-jenkins-service
+docker-jenkins-service [![Build Status](https://travis-ci.org/bronzdoc/jenkins-docker-service.svg?branch=master)](https://travis-ci.org/bronzdoc/jenkins-docker-service)
 =========
 
 Jenkins in docker as a systemd service
