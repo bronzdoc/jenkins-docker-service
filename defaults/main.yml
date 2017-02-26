@@ -1,2 +1,2 @@
 ---
-# defaults file for jenkins-docker-service
+user_home: "{{ lookup('env', 'HOME') }}"
