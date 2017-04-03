@@ -1,4 +1,4 @@
-docker-jenkins-service [![Build Status](https://travis-ci.org/bronzdoc/jenkins-docker-service.svg?branch=master)](https://travis-ci.org/bronzdoc/jenkins-docker-service)
+jenkins-docker-service [![Build Status](https://travis-ci.org/bronzdoc/jenkins-docker-service.svg?branch=master)](https://travis-ci.org/bronzdoc/jenkins-docker-service)
 =========
 
 Jenkins in docker as a systemd service
@@ -22,7 +22,7 @@ Example Playbook
 
     - hosts: hosts
       roles:
-         - { role: docker-jenkins-service }
+         - { role: jenkins-docker-service }
 
 ```
 $ ansible-playbook --ask-sudo playbok.yml
